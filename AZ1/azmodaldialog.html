@@ -194,7 +194,9 @@
                 dialogWidth: 650,
                 dialogHeight: 350,
                 dialogiFrameURL: "sendmail.html?id=2323",
-                dialogNoParentScroll: true
+                dialogNoParentScroll: true,
+                dialogCloseOnEscape: false,
+                dialogBackground: false
             });
         }
 
@@ -307,6 +309,7 @@
                         &emsp;&ensp;&emsp;&ensp;dialogDraggable: true,<br />
                         &emsp;&ensp;&emsp;&ensp;dialogNoParentScroll: false,<br />
                         &emsp;&ensp;&emsp;&ensp;dialogBackground: true,<br />
+                        &emsp;&ensp;&emsp;&ensp;dialogCloseOnEscape: true,<br />
                         &emsp;&ensp;&emsp;&ensp;dialogPosition: false,<br />
                         &emsp;&ensp;&emsp;&ensp;dialogPositionOf: {},<br />
                         &emsp;&ensp;&emsp;&ensp;dialogPositionMy: "left bottom-30",<br />
@@ -382,6 +385,13 @@
                         dialogBackground: true&emsp;&ensp;(default)<br />
                         <br />
                         Ved å endre verdiene til false, vil ikke bakgrunnen bak 'AZModalDialog' tones ned.
+                        <br />
+                        <br />
+                        <strong>ESC (NY)</strong>
+                        <br />
+                        dialogCloseOnEscape: true&emsp;&ensp;(default)<br />
+                        <br />
+                        Ved å endre verdiene til false, vil ikke 'AZModalDialog' lukkes når ESC trykkes.
                         <br />
                         <br />
                         <strong>Posisjonering</strong>
@@ -472,7 +482,9 @@
                         &emsp;&ensp;&emsp;&ensp;dialogWidth: 650,<br />
                         &emsp;&ensp;&emsp;&ensp;dialogHeight: 350,<br />
                         &emsp;&ensp;&emsp;&ensp;dialogiFrameURL: "Din HTML side",<br />
-                        &emsp;&ensp;&emsp;&ensp;dialogNoParentScroll: true<br />
+                        &emsp;&ensp;&emsp;&ensp;dialogNoParentScroll: true,<br />
+                        &emsp;&ensp;&emsp;&ensp;dialogCloseOnEscape: false,<br />
+                        &emsp;&ensp;&emsp;&ensp;dialogBackground: false<br />
                         });<br />
                         <br />
                     </div>

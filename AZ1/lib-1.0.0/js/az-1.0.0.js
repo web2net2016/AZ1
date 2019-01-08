@@ -2047,6 +2047,7 @@ function initializeModalDialog(Options)
         dialogDraggable: true,
         dialogNoParentScroll: false,
         dialogBackground: true,
+        dialogCloseOnEscape: true,
         dialogPosition: false,
         dialogPositionOf: {},
         dialogPositionMy: "left bottom-30",
@@ -2119,7 +2120,7 @@ function initializeModalDialog(Options)
                 height: _Options.dialogHeight,
                 resizable: _Options.dialogHeight,
                 draggable: _Options.dialogDraggable,
-                closeOnEscape: true
+                closeOnEscape: _Options.dialogCloseOnEscape
             });
             $(".ui-dialog-title").html(_Options.dialogTitle);
             $(".ui-dialog-titlebar-close").removeAttr("title");

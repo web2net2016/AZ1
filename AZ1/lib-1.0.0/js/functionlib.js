@@ -605,6 +605,7 @@ function initializeAZWindow(Options)
         dialogHeight: 0,
         dialogLocationReload: false,
         dialogNoParentScroll: false,
+        dialogBackground: true,
         dialogBeforeOpen: function () { },
         dialogAfterOpen: function () { },
         dialogClose: function () { }
@@ -646,6 +647,10 @@ function initializeAZWindow(Options)
             {
                 closeAZWindow();
             });
+            if (_Options.dialogBackground == false)
+            {
+                _$Background.css({ "background-color": "transparent" });
+            }
             if (_Options.dialogWidth > window.innerWidth)
             {
                 _Options.dialogWidth = (window.innerWidth - 20);
@@ -833,6 +838,7 @@ function initializeModalDialog(Options)
         dialogResizable: false,
         dialogDraggable: true,
         dialogNoParentScroll: false,
+        dialogBackground: true,
         dialogPosition: false,
         dialogPositionOf: {},
         dialogPositionMy: "left bottom-30",
@@ -863,9 +869,13 @@ function initializeModalDialog(Options)
             _HTML += '</div>';
             $("body").append(_HTML);
             var _$Background = $("#az-modal-background");
-            _$Background.css({ "display": "block" });
             var _$AzModalDialog = $("#az-modal-dialog");
+            _$Background.css({ "display": "block" });
 
+            if (_Options.dialogBackground == false)
+            {
+                _$Background.css({ "background-color": "transparent" });
+            }
             if (_Options.dialogModal == false)
             {
                 _$Background.off("click").on("click", function (e)

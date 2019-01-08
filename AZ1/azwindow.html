@@ -53,7 +53,8 @@
                 dialogTitle: "AZ Window",
                 dialogText: "Dette er et AZ Window, hvor du har muligheten til å sende inn tekst, HTML, buttons, m.m.",
                 dialogButton1: "OK",
-                dialogLocationReload: true
+                dialogLocationReload: true,
+                dialogBackground: false
             });
         }
 
@@ -92,6 +93,7 @@
                         &emsp;&ensp;&emsp;&ensp;dialogHeight: 0,<br />
                         &emsp;&ensp;&emsp;&ensp;dialogLocationReload: false,<br />
                         &emsp;&ensp;&emsp;&ensp;dialogNoParentScroll: false,<br />
+                        &emsp;&ensp;&emsp;&ensp;dialogBackground: false,<br />
                         &emsp;&ensp;&emsp;&ensp;dialogBeforeOpen: function () { },<br />
                         &emsp;&ensp;&emsp;&ensp;dialogAfterOpen: function () { },<br />
                         &emsp;&ensp;&emsp;&ensp;dialogClose: function () { }<br />
@@ -201,6 +203,14 @@
                             <br />
                         </div>
                         <div class="az-code-property-wrapper">
+                            <property>dialogBackground</property>
+                            <type><span>Type:</span> <brown>Boolean</brown></type>
+                            <default><span>Default:</span> <mediumblue>true</mediumblue></default>
+                            <br />
+                            Ved å endre verdiene til <mediumblue>false</mediumblue>, vil ikke bakgrunnen bak <strong>AZWindow</strong> tones ned.
+                            <br />
+                        </div>
+                        <div class="az-code-property-wrapper">
                             <property>dialogBeforeOpen</property>
                             <type><span>Type:</span> <brown>Function</brown></type>
                             <default><span>Default:</span> <mediumblue>function () { }</mediumblue></default>
@@ -252,7 +262,8 @@
                         &emsp;&ensp;&emsp;&ensp;dialogTitle: "Din tittel",<br />
                         &emsp;&ensp;&emsp;&ensp;dialogText: "Din tekst"<br />
                         &emsp;&ensp;&emsp;&ensp;dialogButton1: "OK"<br />
-                        &emsp;&ensp;&emsp;&ensp;dialogLocationReload: true<br />
+                        &emsp;&ensp;&emsp;&ensp;dialogLocationReload: true,<br />
+                        &emsp;&ensp;&emsp;&ensp;dialogBackground: false<br />
                         });<br />
                         <br />
                     </div>

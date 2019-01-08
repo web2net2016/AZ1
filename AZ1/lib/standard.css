@@ -478,19 +478,32 @@ form.css
         #az-modal > .az-modal-card > header > h1
         {
             display: inline-block;
-            font-size: 18px;
+            font-size: 13px;
         }
 
         #az-modal > .az-modal-card > header > span
         {
             margin-right: 4px;
-            font-size: 17px;
+            font-size: 13px;
         }
 
             #az-modal > .az-modal-card > header > span:hover
             {
                 color: #FFFFFF;
             }
+
+
+    #az-modal > .az-modal-card > article .az-form-group
+    {
+        margin: 3px;
+    }
+
+        #az-modal > .az-modal-card > article .az-form-group .az-button
+        {
+            padding: 5.5px;
+            font-size: 0.85em;
+        }
+
 
 /* Dropdown */
 .az-dropdown-default-layout

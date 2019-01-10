@@ -1407,8 +1407,10 @@ function initializePage(Options, Callback)
     }
 }
 
-var initializeAZAjax = function (Options, ObjData)
+// AZ Ajax
+function initAZAjax(Options)
 {
+    var main = this;
     var _Defaults =
     {
         azAjaxUrl: "",
@@ -1420,32 +1422,32 @@ var initializeAZAjax = function (Options, ObjData)
         azAjaxExceptionAction: "silent",
         azAjaxExceptionErrorText: ""
     };
-    var _Options = $.extend({}, _Defaults, Options || {});
+    main.Options = $.extend({}, _Defaults, Options || {});
 
-    if (_Options.azAjaxUrl != "")
+    if (main.Options.azAjaxUrl != "")
     {
         var _azAjaxOptions =
         {
-            url: _Options.azAjaxUrl,
-            dataType: _Options.azAjaxDataType,
-            type: _Options.azAjaxType,
-            contentType: _Options.azAjaxContentType,
-            timeout: _Options.azAjaxTimeout
+            url: main.Options.azAjaxUrl,
+            dataType: main.Options.azAjaxDataType,
+            type: main.Options.azAjaxType,
+            contentType: main.Options.azAjaxContentType,
+            timeout: main.Options.azAjaxTimeout
         };
 
-        _Options.azAjaxTransferType = _Options.azAjaxObjToSend.hasOwnProperty("TransferType") === true ? _Options.azAjaxObjToSend.TransferType : "";
-        if (isEmpty(_Options.azAjaxObjToSend) === false)
+        main.Options.azAjaxTransferType = main.Options.azAjaxObjToSend.hasOwnProperty("TransferType") === true ? main.Options.azAjaxObjToSend.TransferType : "";
+        if (isEmpty(main.Options.azAjaxObjToSend) === false)
         {
-            _azAjaxOptions.data = JSON.stringify(_Options.azAjaxObjToSend);
-            consoleLog(JSON.stringify(_Options.azAjaxObjToSend));
+            _azAjaxOptions.data = JSON.stringify(main.Options.azAjaxObjToSend);
+            consoleLog(JSON.stringify(main.Options.azAjaxObjToSend));
         }
 
         $.ajaxSetup({ cache: false });
         var _CurrentAjax = $.ajax(_azAjaxOptions).promise();
         _CurrentAjax.fail(function (jqXHR, textStatus, errorThrown)
         {
-            var _statusText = jqXHR.statusText == "timeout" ? "Timeout" : _Options.azAjaxExceptionErrorText;
-            throwException(_Options.azAjaxExceptionAction, "", ThisPage, _Options.azAjaxTransferType + ":Status:" + jqXHR.statusText, _statusText);
+            var _statusText = jqXHR.statusText == "timeout" ? "Timeout" : main.Options.azAjaxExceptionErrorText;
+            throwException(main.Options.azAjaxExceptionAction, "", ThisPage, main.Options.azAjaxTransferType + ":Status:" + jqXHR.statusText, _statusText);
         });
         return _CurrentAjax;
     }

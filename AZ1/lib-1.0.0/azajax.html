@@ -20,31 +20,28 @@
     <script src="/lib-1.0.0/js/az-1.0.0.min.js"></script>
     <link rel="stylesheet" href="/lib/standard.css" />
     <script src="/lib/functionlib.js"></script>
-    <script src="lib/az-codecolor.js"></script>
+    <script src="/lib/az-codecolor.js"></script>
     <script>
 
         $(document).ready(function ()
         {
-            initializePage({ }, function ()
+            w3CodeColor();
+
+            var _azAjaxOptions =
             {
-                w3CodeColor();
-                hideCoverSpin();
+                azAjaxUrl: "https://jsonplaceholder.typicode.com/albums/1/photos",
+                azAjaxType: "GET",
+                azAjaxContentType: ""
+            };
+
+            new initAZAjax(_azAjaxOptions).done(function (data)
+            {
+                $.each(data.slice(0, 3), function (i, SelectedObj)
+                {
+                    console.log(JSON.stringify(SelectedObj))
+                });
             });
 
-            //var _azAjaxOptions =
-            //{
-            //    azAjaxUrl: "https://jsonplaceholder.typicode.com/albums/1/photos",
-            //    azAjaxType: "GET",
-            //    azAjaxContentType: "",
-            //};
-
-            //initializeAZAjax(_azAjaxOptions).done(function (data)
-            //{
-            //    $.each(data.slice(0, 3), function (i, SelectedObj)
-            //    {
-            //        console.log(JSON.stringify(SelectedObj))
-            //    });
-            //});  
         });
 
     </script>
@@ -70,7 +67,7 @@
                         &emsp;&ensp;&emsp;&ensp;azAjaxExceptionErrorText: ""<br />
                         };<br />
                         <br />
-                        initializeAZAjax(_azAjaxOptions).done(function (data)<br />
+                        initAZAjax(_azAjaxOptions).done(function (data)<br />
                         {<br />
                         });<br />
                         <br />
@@ -150,6 +147,3 @@
 
 </body>
 </html>
-
-
-

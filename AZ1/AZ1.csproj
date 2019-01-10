@@ -67,19 +67,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="accordion.html" />
-    <Content Include="azajax.html" />
-    <Content Include="azmodaldialog.html" />
-    <Content Include="azsnackbar.html" />
-    <Content Include="aztemplate.html" />
-    <Content Include="azwindow.html" />
-    <Content Include="card.html" />
-    <Content Include="color.html" />
-    <Content Include="default.html" />
+    <Content Include="lib-1.0.0\accordion.html" />
+    <Content Include="lib-1.0.0\azajax.html" />
+    <Content Include="lib-1.0.0\azmodaldialog.html" />
+    <Content Include="lib-1.0.0\azsnackbar.html" />
+    <Content Include="lib-1.0.0\aztemplate.html" />
+    <Content Include="lib-1.0.0\azwindow.html" />
+    <Content Include="lib-1.0.0\card.html" />
+    <Content Include="lib-1.0.0\color.html" />
+    <Content Include="lib-1.0.0\default.html" />
     <Content Include="favicon.ico" />
-    <Content Include="form.html" />
-    <Content Include="grid.html" />
-    <Content Include="index.html" />
+    <Content Include="lib-1.0.0\form.html" />
+    <Content Include="lib-1.0.0\grid.html" />
+    <Content Include="lib-1.0.0\azcdn100.html" />
     <Content Include="lib-1.0.0\css\accordion.css" />
     <Content Include="lib-1.0.0\css\az-1.0.0.css" />
     <Content Include="lib-1.0.0\css\az-1.0.0.min.css" />
@@ -127,15 +127,15 @@
     <Content Include="lib\az-codecolor.js" />
     <Content Include="lib\functionlib.js" />
     <Content Include="lib\standard.css" />
-    <Content Include="list.html" />
-    <Content Include="mobile.html" />
-    <Content Include="navbar.html" />
-    <Content Include="parallax.html" />
-    <Content Include="portfolio.html" />
-    <Content Include="sendmail.html" />
-    <Content Include="sidebar.html" />
-    <Content Include="slideshow.html" />
-    <Content Include="timeline.html" />
+    <Content Include="lib-1.0.0\list.html" />
+    <Content Include="lib-1.0.0\mobile.html" />
+    <Content Include="lib-1.0.0\navbar.html" />
+    <Content Include="lib-1.0.0\parallax.html" />
+    <Content Include="lib-1.0.0\portfolio.html" />
+    <Content Include="lib-1.0.0\sendmail.html" />
+    <Content Include="lib-1.0.0\sidebar.html" />
+    <Content Include="lib-1.0.0\slideshow.html" />
+    <Content Include="lib-1.0.0\timeline.html" />
     <Content Include="Web.config" />
     <Content Include="web2net\648991523.mp4" />
     <Content Include="web2net\analytics.png" />

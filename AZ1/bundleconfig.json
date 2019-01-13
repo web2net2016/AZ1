@@ -1,5 +1,20 @@
 [
   {
+    "outputFileName": "lib-1.0.0/js/az-1.0.0.js",
+    "inputFiles": [
+      "lib-1.0.0/js/jquery.3.3.1.js",
+      "lib-1.0.0/js/jquery.matchHeight.js",
+      "lib-1.0.0/js/moment.locales.js",
+      "lib-1.0.0/jqueryui/jquery-ui.min.js",
+      "lib-1.0.0/jqueryui/jquery_ui_langs.min.js",
+      "lib-1.0.0/js/numeral.js",
+      "lib-1.0.0/js/numeral.locales.js",
+      "lib-1.0.0/js/watch.js",
+      "lib-1.0.0/js/default.lang.js",
+      "lib-1.0.0/js/functionlib.js"
+    ]
+  },
+  {
     "outputFileName": "lib-1.0.0/css/az-1.0.0.css",
     "inputFiles": [
       "lib-1.0.0/css/accordion.css",
@@ -21,21 +36,6 @@
       "lib-1.0.0/css/timeline.css",
       "lib-1.0.0/fontawesome/fontawesome-all.css",
       "lib-1.0.0/jqueryui/jquery-ui.min.css"
-    ]
-  },
-  {
-    "outputFileName": "lib-1.0.0/js/az-1.0.0.js",
-    "inputFiles": [
-      "lib-1.0.0/js/jquery.3.3.1.js",
-      "lib-1.0.0/js/jquery.matchHeight.js",
-      "lib-1.0.0/js/moment.locales.js",
-      "lib-1.0.0/jqueryui/jquery-ui.min.js",
-      "lib-1.0.0/jqueryui/jquery_ui_langs.min.js",
-      "lib-1.0.0/js/numeral.js",
-      "lib-1.0.0/js/numeral.locales.js",
-      "lib-1.0.0/js/watch.js",
-      "lib-1.0.0/js/default.lang.js",
-      "lib-1.0.0/js/functionlib.js"
     ]
   }
 ]

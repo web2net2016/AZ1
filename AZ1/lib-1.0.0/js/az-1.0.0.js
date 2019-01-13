@@ -1206,8 +1206,6 @@ MyDefaultLanguage =
                     }
             }
     };
-/*! AZ-Functionlib v1.0.0 | (c) web2net AS */
-// Site info
 if (typeof AppName === 'undefined' || AppName === null)
 {
     var AppName = "AZ Team";

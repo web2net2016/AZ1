@@ -2135,7 +2135,7 @@ ul
 
 #az-cover-spin
 {
-    z-index: 50000;
+    z-index: 5000;
     position: fixed;
     width: 100%;
     left: 0;

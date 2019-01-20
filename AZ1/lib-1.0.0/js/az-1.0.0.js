@@ -1415,7 +1415,7 @@ function initAZAjax(Options)
         azAjaxDataType: "json",
         azAjaxType: "POST",
         azAjaxContentType: "application/json; charset=utf-8",
-        azAjaxObjHeader: {},
+        azAjaxObjHeaders: {},
         azAjaxTimeout: 15000,
         azAjaxObjToSend: {},
         azAjaxExceptionAction: "silent",
@@ -1431,7 +1431,7 @@ function initAZAjax(Options)
             dataType: main.Options.azAjaxDataType,
             type: main.Options.azAjaxType,
             contentType: main.Options.azAjaxContentType,
-            header: main.Options.azAjaxObjHeader,
+            headers: main.Options.azAjaxObjHeaders,
             timeout: main.Options.azAjaxTimeout
         };
 

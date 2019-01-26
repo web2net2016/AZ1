@@ -68,7 +68,7 @@
                 _HTML += '<p>Kontaktperson: ' + _ObjForm.Contact + '</p>';
                 _HTML += '<p>Hva henvendelsen gjelder: ' + $("#RequestReasonId option:selected").text() + '</p>';
                 _HTML += '<p>Kommentar: ' + _ObjForm.Comment + '</p><br />';
-                _ObjSendMail.To = "frankudnes@gmail.com";
+                _ObjSendMail.To = ["frankudnes@gmail.com"];
                 _ObjSendMail.From = _ObjForm.Email;
                 _ObjSendMail.Subject = "Kontakt Oss";
                 _ObjSendMail.Body = _HTML;

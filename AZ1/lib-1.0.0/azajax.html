@@ -27,20 +27,20 @@
         {
             w3CodeColor();
 
-            var _azAjaxOptions =
-            {
-                azAjaxUrl: "https://jsonplaceholder.typicode.com/albums/1/photos",
-                azAjaxType: "GET",
-                azAjaxContentType: ""
-            };
+            //var _azAjaxOptions =
+            //{
+            //    azAjaxUrl: "https://jsonplaceholder.typicode.com/albums/1/photos",
+            //    azAjaxType: "GET",
+            //    azAjaxContentType: ""
+            //};
 
-            new initAZAjax(_azAjaxOptions).done(function (data)
-            {
-                $.each(data.slice(0, 3), function (i, SelectedObj)
-                {
-                    console.log(JSON.stringify(SelectedObj))
-                });
-            });
+            //new initAZAjax(_azAjaxOptions).done(function (data)
+            //{
+            //    $.each(data.slice(0, 3), function (i, SelectedObj)
+            //    {
+            //        console.log(JSON.stringify(SelectedObj))
+            //    });
+            //});
 
         });
 

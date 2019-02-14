@@ -197,6 +197,91 @@ function initializePage(Options, Callback)
     }
 }
 
+// AZ Tabs
+function initAZTabs(Options)
+{
+    var main = this;
+    var _Defaults =
+    {
+        azTabsId: "",
+        azTabsHeightStyle: "content",
+        azTabsOpenEvent: "click"
+    };
+    main.Options = $.extend({}, _Defaults, Options || {});
+
+    if (main.Options.azTabsId != "")
+    {
+        main.$Tabs = $("#" + main.Options.azTabsId);
+        main.$TabsCard = main.$Tabs.children(".az-tabs-card");
+
+        var _MaxArticleHeight = 0;
+        main.azArticleHeight = function ()
+        {
+            _MaxArticleHeight = 0;
+            main.$TabsCard.children("article").css({ height: "inherit" });
+            main.$TabsCard.children("article").each(function ()
+            {
+                _MaxArticleHeight = Math.max(_MaxArticleHeight, $(this).height());
+            });
+            if (_MaxArticleHeight > 0)
+            {
+                main.$TabsCard.children("article").height(_MaxArticleHeight);
+            }
+        }
+
+        main.setAZTabs = function (SelectedIndex)
+        {
+            execAZTabs(main.$Tabs.children("ul").children("li").eq(SelectedIndex));
+        }
+
+        main.$Tabs.off().on(main.Options.azTabsOpenEvent, "ul > li", function (e)
+        {
+            var _Element = e.target || e.srcElement;
+            $.publish("functionlib/azTabs",
+            {
+                azTabsId: main.Options.azTabsId,
+                azTabsJQElement: $(_Element)
+            });
+            execAZTabs($(this));
+        });
+
+        if (window.innerWidth < 576)
+        {
+            main.$Tabs.removeClass("az-tabs-vertical");
+        }
+
+        var azTabsDeactivated = "";
+        function execAZTabs($SelectedTab)
+        {
+            var _MenuIndex = $($SelectedTab).index()
+
+            main.$Tabs.children("ul").children("li").removeClass("az-tabs-tab-active");
+            main.$Tabs.children("ul").children("li").eq(_MenuIndex).addClass("az-tabs-tab-active");
+
+            main.$TabsCard.children("article").removeClass("az-tabs-article-active");
+            main.$TabsCard.eq(_MenuIndex).children("article").addClass("az-tabs-article-active");
+
+            $.publish("functionlib/azTabsActivate",
+            {
+                azTabsId: main.Options.azTabsId,
+                azTabsActivated: _MenuIndex,
+                azTabsDeactivated: azTabsDeactivated
+            });
+            azTabsDeactivated = _MenuIndex;
+        }
+
+        if (main.Options.azTabsHeightStyle == "auto")
+        {
+            main.azArticleHeight();
+            $(window).resize(function ()
+            {
+                main.azArticleHeight();
+            });
+        }
+        main.setAZTabs(0);
+    }
+}
+
 // AZ Ajax
 function initAZAjax(Options)
 {
@@ -1296,11 +1381,11 @@ function setGridView(SelectedArea)
             _$Header = $(this);
             if (ObjJsonValidation.hasOwnProperty($("a", _$Header).text()) && ObjJsonValidation[$("a", _$Header).text()].sort == true)
             {
-                $("a", _$Header).text(SingleElements["label" + $("a", _$Header).text()]);
+                $("a", _$Header).text(SingleElements["labelHeader" + $("a", _$Header).text()]);
             }
             else
             {
-                _$Header.text(SingleElements["label" + $("a", _$Header).text()]);
+                _$Header.text(SingleElements["labelHeader" + $("a", _$Header).text()]);
             }
         });
 
@@ -1336,7 +1421,7 @@ function setGridView(SelectedArea)
             }
             else if (_ObjJsonReturn.datatype == "int")
             {
-                $(this).text(SingleElements["label" + $(this).text()]);
+                $(this).text(SingleElements["labelRow" + $(this).text()]);
             }
 
             if ($(this).children().is("span") == true)

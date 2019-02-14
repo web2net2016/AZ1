@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="lib-1.0.0\aztabs.html" />
     <Content Include="lib-1.0.0\accordion.html" />
     <Content Include="lib-1.0.0\azajax.html" />
     <Content Include="lib-1.0.0\azmodaldialog.html" />
@@ -79,6 +80,7 @@
     <Content Include="lib-1.0.0\css\az-1.0.0.min.css">
       <DependentUpon>az-1.0.0.css</DependentUpon>
     </Content>
+    <Content Include="lib-1.0.0\css\tabs.css" />
     <Content Include="lib-1.0.0\default.html" />
     <Content Include="favicon.ico" />
     <Content Include="lib-1.0.0\form.html" />

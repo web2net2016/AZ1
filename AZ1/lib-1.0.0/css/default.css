@@ -141,6 +141,7 @@ ul
     content: '';
     display: block;
     position: absolute;
+    z-index: 1;
     left: 48%;
     top: 40%;
     width: 40px;

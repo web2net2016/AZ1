@@ -9,6 +9,7 @@
     {
         content: '';
         position: absolute;
+        z-index: 1;
         width: 6px;
         top: 0;
         bottom: 0;
@@ -29,7 +30,7 @@
         {
             content: '';
             position: absolute;
-            z-index: 1;
+            z-index: 2;
             top: 15px;
             right: -16.5px;
             width: 25px;
@@ -170,6 +171,7 @@
 .az-timeline-card > .az-timeline-overlay
 {
     position: absolute;
+    z-index: 1;
     top: 0;
     bottom: 0;
     left: 0;
@@ -177,6 +179,9 @@
     height: 100%;
     width: 100%;
     opacity: 0;
+    -webkit-transition: opacity 0.8s ease;
+    -moz-transition: opacity 0.8s ease;
+    -o-transition: opacity 0.8s ease;
     transition: opacity 0.8s ease;
 }
 

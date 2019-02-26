@@ -4,22 +4,61 @@
     width: 100%;
 }
 
-    .az-slideshow .az-slides
+    .az-slideshow slide
     {
-        position: relative;
+        position: absolute;
+        z-index: 1;
         width: 100%;
     }
 
-        .az-slideshow .az-slides slide
+        .az-slideshow slide > img
         {
-            position: absolute;
+            vertical-align: middle;
             width: 100%;
         }
 
-            .az-slideshow .az-slides slide img
+        .az-slideshow slide > div
+        {
+            position: absolute;
+            z-index: 2;
+            bottom: 8px;
+            background-color: #000000;
+            opacity: 0.8;
+            text-align: center;
+        }
+
+        .az-slideshow slide > div > h1
+        {
+            padding: 14px;
+            text-transform: uppercase;
+            color: #E8941A;
+        }
+
+            .az-slideshow slide > div > a
             {
-                width: 100%;
+                font-size: 22px;
+                color: #2da1c5;
             }
+
+                .az-slideshow slide > div > a:hover
+                {
+                    color: #2588a6;
+                }
+
+                    .az-slideshow slide > div > a:hover i
+                    {
+                        margin-left: 30px;
+                    }
+
+                .az-slideshow slide > div > a i
+                {
+                    margin-left: 15px;
+                    -webkit-transition: all 0.3s ease-in-out;
+                    -moz-transition: all 0.3s ease-in-out;
+                    -o-transition: all 0.3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
+                }
+
 
     .az-slideshow .az-arrows
     {

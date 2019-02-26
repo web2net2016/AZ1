@@ -57,12 +57,13 @@
 
 .az-portfolio-content-hidden
 {
-    -ms-transform: scale(0, 0);
-    -webkit-transform: scale(0, 0);
-    transform: scale(0, 0);
     opacity: 0;
     width: 0 !important;
     margin: 0 !important;
+    -webkit-transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+    -o-transform: scale(0, 0);
+    transform: scale(0, 0);
 }
 
 /* Overlay */
@@ -74,6 +75,7 @@
 .az-portfolio-content li > .az-portfolio-card > .az-portfolio-overlay
 {
     position: absolute;
+    z-index: 1;
     top: 0;
     bottom: 0;
     left: 0;
@@ -81,6 +83,9 @@
     height: 100%;
     width: 100%;
     opacity: 0;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
     transition: opacity 0.5s ease;
 }
 

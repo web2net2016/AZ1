@@ -58,6 +58,7 @@
         padding: 0 7px 0 7px;
         box-sizing: border-box;
         -webkit-transition: -webkit-box-shadow ease-in-out .15s;
+        -moz-transition: box-shadow ease-in-out .15s;
         -o-transition: box-shadow ease-in-out .15s;
         transition: box-shadow ease-in-out .15s;
     }
@@ -119,6 +120,7 @@
     {
         outline: 0;
         -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+        -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
         box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
     }
 
@@ -135,6 +137,7 @@
         box-sizing: border-box;
         resize: none;
         -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+        -moz-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
         -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
         transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     }
@@ -161,6 +164,7 @@
         {
             outline: 0;
             -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+            -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
             box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
         }
 
@@ -169,6 +173,7 @@
         width: 100%;
         height: 30px;
         -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+        -moz-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
         -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
         transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     }
@@ -192,6 +197,7 @@
         {
             outline: 0;
             -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+            -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
             box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
         }
 
@@ -202,6 +208,7 @@
         height: 20px;
         top: 5px;
         -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+        -moz-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
         -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
         transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     }
@@ -231,6 +238,7 @@
         {
             outline: 0;
             -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+            -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
             box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
         }
 
@@ -352,9 +360,13 @@
     .az-form-group .az-label-animated
     {
         position: absolute;
+        z-index: 1;
         top: 13px;
         opacity: 0.5;
-        transition: 0.2s ease top;
+        -webkit-transition: top 0.2s ease;
+        -moz-transition: top 0.2s ease;
+        -o-transition: top 0.2s ease;
+        transition: top 0.2s ease;
     }
 
         .az-form-group .az-label-animated.xs
@@ -507,6 +519,7 @@
 .az-badge-ul-lg
 {
     position: absolute;
+    z-index: 1;
     left: -22px;
     top: -6px;
 }
@@ -514,6 +527,7 @@
 .az-badge-ul-2x
 {
     position: absolute;
+    z-index: 1;
     left: -22px;
     top: -6px;
 }
@@ -521,6 +535,7 @@
 .az-badge-bl-lg
 {
     position: absolute;
+    z-index: 1;
     left: -22px;
     top: 9px;
 }
@@ -528,6 +543,7 @@
 .az-badge-bl-2x
 {
     position: absolute;
+    z-index: 1;
     left: -22px;
     top: 15px;
 }
@@ -535,6 +551,7 @@
 .az-badge-ur-lg
 {
     position: absolute;
+    z-index: 1;
     left: 15px;
     top: -6px;
 }
@@ -542,6 +559,7 @@
 .az-badge-ur-2x
 {
     position: absolute;
+    z-index: 1;
     left: 24px;
     top: -6px;
 }
@@ -549,6 +567,7 @@
 .az-badge-br-lg
 {
     position: absolute;
+    z-index: 1;
     left: 15px;
     top: 9px;
 }
@@ -556,6 +575,7 @@
 .az-badge-br-2x
 {
     position: absolute;
+    z-index: 1;
     left: 24px;
     top: 15px;
 }

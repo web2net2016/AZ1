@@ -43,8 +43,8 @@
 
 .az-card
 {
-    display: block;
     position: relative;
+    display: block;
     margin: 0 7px 0 7px;
 }
 
@@ -72,6 +72,7 @@
     .az-card > .az-card-overlay
     {
         position: absolute;
+        z-index: 1;
         top: 0;
         bottom: 0;
         left: 0;
@@ -79,6 +80,9 @@
         height: 100%;
         width: 100%;
         opacity: 0;
+        -webkit-transition: opacity 0.5s ease;
+        -moz-transition: opacity 0.5s ease;
+        -o-transition: opacity 0.5s ease;
         transition: opacity 0.5s ease;
     }
 
@@ -2202,6 +2206,7 @@ ul
     content: '';
     display: block;
     position: absolute;
+    z-index: 1;
     left: 48%;
     top: 40%;
     width: 40px;
@@ -5143,6 +5148,7 @@ ul
         padding: 0 7px 0 7px;
         box-sizing: border-box;
         -webkit-transition: -webkit-box-shadow ease-in-out .15s;
+        -moz-transition: box-shadow ease-in-out .15s;
         -o-transition: box-shadow ease-in-out .15s;
         transition: box-shadow ease-in-out .15s;
     }
@@ -5204,6 +5210,7 @@ ul
     {
         outline: 0;
         -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+        -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
         box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
     }
 
@@ -5220,6 +5227,7 @@ ul
         box-sizing: border-box;
         resize: none;
         -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+        -moz-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
         -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
         transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     }
@@ -5246,6 +5254,7 @@ ul
         {
             outline: 0;
             -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+            -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
             box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
         }
 
@@ -5254,6 +5263,7 @@ ul
         width: 100%;
         height: 30px;
         -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+        -moz-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
         -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
         transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     }
@@ -5277,6 +5287,7 @@ ul
         {
             outline: 0;
             -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+            -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
             box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
         }
 
@@ -5287,6 +5298,7 @@ ul
         height: 20px;
         top: 5px;
         -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+        -moz-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
         -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
         transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     }
@@ -5316,6 +5328,7 @@ ul
         {
             outline: 0;
             -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+            -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
             box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
         }
 
@@ -5437,9 +5450,13 @@ ul
     .az-form-group .az-label-animated
     {
         position: absolute;
+        z-index: 1;
         top: 13px;
         opacity: 0.5;
-        transition: 0.2s ease top;
+        -webkit-transition: top 0.2s ease;
+        -moz-transition: top 0.2s ease;
+        -o-transition: top 0.2s ease;
+        transition: top 0.2s ease;
     }
 
         .az-form-group .az-label-animated.xs
@@ -5592,6 +5609,7 @@ ul
 .az-badge-ul-lg
 {
     position: absolute;
+    z-index: 1;
     left: -22px;
     top: -6px;
 }
@@ -5599,6 +5617,7 @@ ul
 .az-badge-ul-2x
 {
     position: absolute;
+    z-index: 1;
     left: -22px;
     top: -6px;
 }
@@ -5606,6 +5625,7 @@ ul
 .az-badge-bl-lg
 {
     position: absolute;
+    z-index: 1;
     left: -22px;
     top: 9px;
 }
@@ -5613,6 +5633,7 @@ ul
 .az-badge-bl-2x
 {
     position: absolute;
+    z-index: 1;
     left: -22px;
     top: 15px;
 }
@@ -5620,6 +5641,7 @@ ul
 .az-badge-ur-lg
 {
     position: absolute;
+    z-index: 1;
     left: 15px;
     top: -6px;
 }
@@ -5627,6 +5649,7 @@ ul
 .az-badge-ur-2x
 {
     position: absolute;
+    z-index: 1;
     left: 24px;
     top: -6px;
 }
@@ -5634,6 +5657,7 @@ ul
 .az-badge-br-lg
 {
     position: absolute;
+    z-index: 1;
     left: 15px;
     top: 9px;
 }
@@ -5641,6 +5665,7 @@ ul
 .az-badge-br-2x
 {
     position: absolute;
+    z-index: 1;
     left: 24px;
     top: 15px;
 }
@@ -8108,12 +8133,13 @@ template
 
 .az-portfolio-content-hidden
 {
-    -ms-transform: scale(0, 0);
-    -webkit-transform: scale(0, 0);
-    transform: scale(0, 0);
     opacity: 0;
     width: 0 !important;
     margin: 0 !important;
+    -webkit-transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+    -o-transform: scale(0, 0);
+    transform: scale(0, 0);
 }
 
 /* Overlay */
@@ -8125,6 +8151,7 @@ template
 .az-portfolio-content li > .az-portfolio-card > .az-portfolio-overlay
 {
     position: absolute;
+    z-index: 1;
     top: 0;
     bottom: 0;
     left: 0;
@@ -8132,6 +8159,9 @@ template
     height: 100%;
     width: 100%;
     opacity: 0;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
     transition: opacity 0.5s ease;
 }
 
@@ -8180,22 +8210,61 @@ template
     width: 100%;
 }
 
-    .az-slideshow .az-slides
+    .az-slideshow slide
     {
-        position: relative;
+        position: absolute;
+        z-index: 1;
         width: 100%;
     }
 
-        .az-slideshow .az-slides slide
+        .az-slideshow slide > img
         {
-            position: absolute;
+            vertical-align: middle;
             width: 100%;
         }
 
-            .az-slideshow .az-slides slide img
+        .az-slideshow slide > div
+        {
+            position: absolute;
+            z-index: 2;
+            bottom: 8px;
+            background-color: #000000;
+            opacity: 0.8;
+            text-align: center;
+        }
+
+        .az-slideshow slide > div > h1
+        {
+            padding: 14px;
+            text-transform: uppercase;
+            color: #E8941A;
+        }
+
+            .az-slideshow slide > div > a
             {
-                width: 100%;
+                font-size: 22px;
+                color: #2da1c5;
             }
+
+                .az-slideshow slide > div > a:hover
+                {
+                    color: #2588a6;
+                }
+
+                    .az-slideshow slide > div > a:hover i
+                    {
+                        margin-left: 30px;
+                    }
+
+                .az-slideshow slide > div > a i
+                {
+                    margin-left: 15px;
+                    -webkit-transition: all 0.3s ease-in-out;
+                    -moz-transition: all 0.3s ease-in-out;
+                    -o-transition: all 0.3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
+                }
+
 
     .az-slideshow .az-arrows
     {
@@ -8230,6 +8299,7 @@ template
             font-size: 35px;
         }
 }
+
 .az-table
 {
 	border-collapse: collapse;
@@ -9206,6 +9276,7 @@ address
     {
         content: '';
         position: absolute;
+        z-index: 1;
         width: 6px;
         top: 0;
         bottom: 0;
@@ -9226,7 +9297,7 @@ address
         {
             content: '';
             position: absolute;
-            z-index: 1;
+            z-index: 2;
             top: 15px;
             right: -16.5px;
             width: 25px;
@@ -9367,6 +9438,7 @@ address
 .az-timeline-card > .az-timeline-overlay
 {
     position: absolute;
+    z-index: 1;
     top: 0;
     bottom: 0;
     left: 0;
@@ -9374,6 +9446,9 @@ address
     height: 100%;
     width: 100%;
     opacity: 0;
+    -webkit-transition: opacity 0.8s ease;
+    -moz-transition: opacity 0.8s ease;
+    -o-transition: opacity 0.8s ease;
     transition: opacity 0.8s ease;
 }
 

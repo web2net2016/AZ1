@@ -1,7 +1,7 @@
 ﻿.az-card
 {
-    display: block;
     position: relative;
+    display: block;
     margin: 0 7px 0 7px;
 }
 
@@ -29,6 +29,7 @@
     .az-card > .az-card-overlay
     {
         position: absolute;
+        z-index: 1;
         top: 0;
         bottom: 0;
         left: 0;
@@ -36,6 +37,9 @@
         height: 100%;
         width: 100%;
         opacity: 0;
+        -webkit-transition: opacity 0.5s ease;
+        -moz-transition: opacity 0.5s ease;
+        -o-transition: opacity 0.5s ease;
         transition: opacity 0.5s ease;
     }
 

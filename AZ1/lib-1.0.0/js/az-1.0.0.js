@@ -1405,6 +1405,90 @@ function initializePage(Options, Callback)
     }
 }
 
+// AZ Slideshow
+function initSlideshow(Options)
+{
+    var main = this;
+    var _Defaults =
+    {
+        azSlideshowId: "",
+        azSlideshowArrows: false,
+        azSlideshowTimer: 3000,
+        azSlideshowFadeIn: 1000,
+        azSlideshowFadeOut: 1000
+    };
+    main.Options = $.extend({}, _Defaults, Options || {});
+
+    if (main.Options.azSlideshowId != "")
+    {
+        main.$Slideshow = $("#" + main.Options.azSlideshowId);
+        main.$Slides = main.$Slideshow.children("slide");
+        main._SlideIndex = 0;
+        main._SlideShowTimer = 0;
+
+        $.subscribe("functionlib/windowResize", function (e, data)
+        {
+            main.$Slideshow.height(main.$Slides.eq(0).height());
+        });
+
+        main.$Slides.not(":first").hide();
+        main.$Slideshow.height(main.$Slides.eq(0).height());
+        runSlides();
+
+        function runSlides()
+        {
+            main.$Slides.eq(main._SlideIndex).fadeOut(main.Options.azSlideshowFadeOut);
+            main._SlideIndex = (main._SlideIndex != main.$Slides.length - 1) ? main._SlideIndex + 1 : 0;
+            main.$Slides.eq(main._SlideIndex).fadeIn(main.Options.azSlideshowFadeIn, function ()
+            {
+                main._SlideShowTimer = window.setTimeout(runSlides, main.Options.azSlideshowTimer)
+            });
+        }
+    }
+}
+
+//if (main.Options.azSlideshowArrows)
+//{
+//    function plusDivs(n)
+//    {
+//        $.unsubscribe("functionlib/runSlides");
+//        window.clearTimeout(main.Options.azSlideshowTimer);
+//        main._SlideIndex += n;
+//        showDivs();
+//    }
+
+//    function showDivs()
+//    {
+//        if (main._SlideIndex > main.$Slides.length - 1)
+//        {
+//            main._SlideIndex = 0;
+//        }
+//        if (main._SlideIndex < 0)
+//        {
+//            main._SlideIndex = main.$Slides.length - 1;
+//        };
+//        main.$Slides.hide();
+//        main.$Slides.eq(main._SlideIndex).show();
+//    }
+
+//    main.$Slideshow.append('<div class="az-arrows az-arrow-left az-display-left" onclick="plusDivs(-1);">&#10094;</div><div class="az-arrows az-arrow-right az-display-right" onclick="plusDivs(1);">&#10095;</div>');
+//    $(".az-arrows", main.$Slideshow).on("mouseenter", function ()
+//    {
+//        $.unsubscribe("functionlib/runSlides");
+//        window.clearTimeout(main._SlideShowTimer);
+
+//    }).on("mouseleave", function ()
+//    {
+//        $.subscribe("functionlib/runSlides", function (e, data)
+//        {
+//            _SlideShowTimer = window.setTimeout(runSlides, main.Options.azSlideshowTimer);
+//        });
+//        runSlides();
+//    })
+//}
+
+
+
 // AZ Tabs
 function initAZTabs(Options)
 {
@@ -4224,90 +4308,6 @@ function setParallaxImages(ParallaxImages)
         var _CurrentImage = $('#img' + (i + 1));
         _CurrentImage.css({ 'background-image': 'url(' + ImagesContent.url + ')', 'height': ImagesContent.height, 'opacity': ImagesContent.opacity });
     });
-}
-
-function initializeSlideshow(Options)
-{
-    var _Defaults =
-    {
-        setArrows: false,
-        timer: 3000,
-        fadein: 1000,
-        fadeout: 1000
-    };
-    var _Options = $.extend({}, _Defaults, Options || {});
-
-    var _$Slideshow = $(".az-slideshow");
-    var _$Slides = $(".az-slides");
-    var _SlideShowTimer = 0;
-    var _SlideIndex = 0;
-
-    if (_$Slideshow.length > 0)
-    {
-        if (_Options.setArrows)
-        {
-            _$Slideshow.append('<div class="az-arrows az-arrow-left az-display-left" onclick="plusDivs(-1)">&#10094;</div><div class="az-arrows az-arrow-right az-display-right" onclick="plusDivs(1)">&#10095;</div>');
-            $(".az-arrows", _$Slideshow).on("mouseenter", function ()
-            {
-                $.unsubscribe("functionlib/runSlides");
-                window.clearTimeout(_SlideShowTimer);
-
-            }).on("mouseleave", function ()
-            {
-                $.subscribe("functionlib/runSlides", function (e, data)
-                {
-                    _SlideShowTimer = window.setTimeout(runSlides, _Options.timer);
-                });
-                runSlides();
-            })
-        }
-
-        $.subscribe("functionlib/windowResize", function (e, data)
-        {
-            _$Slideshow.height($("slide:first", _$Slides).height());
-        });
-
-        $.subscribe("functionlib/runSlides", function (e, data)
-        {
-            _SlideShowTimer = window.setTimeout(runSlides, _Options.timer);
-        });
-
-        _$Slideshow.height($("slide:first", _$Slides).height());
-        $("slide:gt(0)", _$Slides).hide();
-        runSlides();
-
-        function runSlides()
-        {
-            $("slide", _$Slides).eq(_SlideIndex).fadeOut(_Options.fadeout);
-            _SlideIndex = (_SlideIndex != $("slide", _$Slides).length - 1) ? _SlideIndex + 1 : 0;
-            $("slide", _$Slides).eq(_SlideIndex).fadeIn(_Options.fadein, function ()
-            {
-                $.publish("functionlib/runSlides");
-            });
-        }
-
-        plusDivs = function (n)
-        {
-            $.unsubscribe("functionlib/runSlides");
-            window.clearTimeout(_SlideShowTimer);
-            _SlideIndex += n;
-            showDivs();
-        }
-
-        showDivs = function ()
-        {
-            if (_SlideIndex > $("slide", _$Slides).length - 1)
-            {
-                _SlideIndex = 0;
-            }
-            if (_SlideIndex < 0)
-            {
-                _SlideIndex = $("slide", _$Slides).length - 1;
-            };
-            $("slide", _$Slides).hide();
-            $("slide", _$Slides).eq(_SlideIndex).show();
-        }
-    }
 }
 
 var _WindowWidth = 0;

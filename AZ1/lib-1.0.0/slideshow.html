@@ -28,18 +28,26 @@
             initializePage({}, function ()
             {
                 hideCoverSpin();
-                initializeSlideshow(
+
+                var azSlideshow1 = new initSlideshow(
                 {
-                    setArrows: true,
-                    timer: 3000,
-                    fadein: 1000,
-                    fadeout: 1000
+                    azSlideshowId: "az-slideshow-1"
                 });
-                $("#section-container-1-col-1, #section-container-1-col-2, #section-container-1-col-3").matchHeight();
+
+                var azSlideshow2 = new initSlideshow(
+                {
+                    azSlideshowId: "az-slideshow-2",
+                    azSlideshowTimer: 500,
+                    azSlideshowFadeIn: 500,
+                    azSlideshowFadeOut: 500
+                });
+
+                $("#section-container-1-col-1, #section-container-1-col-2").matchHeight();
             });
         });
 
     </script>
+
 </head>
 <body>
 
@@ -51,20 +59,30 @@
                 <div class="az-row">
                     <div class="az-col xs-12">
 
-                        <div class="az-slideshow">
+                        <div id="az-slideshow-1" class="az-slideshow">
+                            <slide>
+                                <img src="/web2net/slideshow1.jpg">
+                                <div>
+                                    <h1>Søknad om bryggeplass 1</h1>
+                                    <a href="#bryggeplass">Ta kontakt <i class="fa fa-angle-right"></i></a>
+                                </div>
+                            </slide>
 
-                            <div class="az-slides">
-                                <slide>
-                                    <img src="/web2net/slideshow1.jpg">
-                                </slide>
-                                <slide>
-                                    <img src="/web2net/slideshow2.jpg">
-                                </slide>
-                                <slide>
-                                    <img src="/web2net/slideshow3.jpg">
-                                </slide>
-                            </div>
+                            <slide>
+                                <img src="/web2net/slideshow2.jpg">
+                                <div>
+                                    <h1>Søknad om bryggeplass 2</h1>
+                                    <a href="#bryggeplass">Ta kontakt <i class="fa fa-angle-right"></i></a>
+                                </div>
+                            </slide>
 
+                            <slide>
+                                <img src="/web2net/slideshow3.jpg">
+                                <div>
+                                    <h1>Søknad om bryggeplass 3</h1>
+                                    <a href="#bryggeplass">Ta kontakt <i class="fa fa-angle-right"></i></a>
+                                </div>
+                            </slide>
                         </div>
 
                     </div>
@@ -96,10 +114,59 @@
                     </div>
                     <div class="az-col xs-12 lg-4">
 
-                        <div id="section-container-1-col-3" class="az-margin-14 az-white az-bg-gray">
-                            <h1 class="az-xs-text-xlarge az-sm-text-xxlarge az-text-uppercase az-text-center az-padding-7">Sosiale medier</h1>
-                            <p class="az-text-center"><img alt="" class="az-xs-width-40 az-sm-width-30 az-lg-width-40" src="/web2net/sosial-media-1.png" /></p>
-                            <p class="az-center az-padding-t-14 az-padding-b-14 az-xs-width-90 az-sm-width-80">Sosiale medier er et verktøy for å nå ut til dine eksisterende og nye kunder. Med enkle grep kan vi gjøre dine hjemmesider langt mer tilpasset den sosiale verden enn de kanskje er i dag.</p>
+
+                        <div id="az-slideshow-2" class="az-slideshow">
+                            <slide>
+                                <img src="/web2net/slideshow3.jpg">
+                            </slide>
+
+                            <slide>
+                                <img src="/web2net/slideshow1.jpg">
+                            </slide>
+
+                            <slide>
+                                <img src="/web2net/slideshow2.jpg">
+                            </slide>
+
+                            <slide>
+                                <img src="/web2net/slideshow1.jpg">
+                            </slide>
+
+                            <slide>
+                                <img src="/web2net/slideshow3.jpg">
+                            </slide>
+
+                            <slide>
+                                <img src="/web2net/slideshow2.jpg">
+                            </slide>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div id="section-3" class="az-section">
+            <div class="az-container-fluid">
+
+                <div class="az-row">
+                    <div class="az-col xs-12 lg-6">
+
+                        <div id="section-container-1-col-1" class="az-margin-14 az-white az-bg-gray">
+                            <h1 class="az-xs-text-xlarge az-sm-text-xxlarge az-text-uppercase az-text-center az-padding-7">Webmaster tools</h1>
+                            <p class="az-text-center"><img alt="" class="az-xs-width-40 az-sm-width-30 az-lg-width-40" src="/web2net/webmastertools.png" /></p>
+                            <p class="az-center az-padding-t-14 az-padding-b-14 az-xs-width-90 az-sm-width-80">Webmaster Tools - Google Search Console, er et verktøy Google har laget for å gi deg en generell oversikt over helsestatusen til dine hjemmesider. Dette er et kraftig verktøy som oppdateres jevnlig med ny funksjonalitet for å gi deg en bedre oversikt.</p>
+                        </div>
+
+                    </div>
+                    <div class="az-col xs-12 lg-6">
+
+                        <div id="section-container-1-col-2" class="az-margin-14 az-white az-bg-gray">
+                            <h1 class="az-xs-text-xlarge az-sm-text-xxlarge az-text-uppercase az-text-center az-padding-7">Google analytics</h1>
+                            <p class="az-text-center"><img alt="" class="az-xs-width-40 az-sm-width-30 az-lg-width-40" src="/web2net/analytics.png" /></p>
+                            <p class="az-center az-padding-t-14 az-padding-b-14 az-xs-width-90 az-sm-width-80">Google Analytics utfører flere typer analyser av dine hjemmesider og gir deg statistikk og grunnleggende informasjon for markedsføring og søkemotoroptimalisering (SEO).</p>
                         </div>
 
                     </div>

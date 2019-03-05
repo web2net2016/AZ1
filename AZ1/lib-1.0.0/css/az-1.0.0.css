@@ -5153,6 +5153,24 @@ ul
         transition: box-shadow ease-in-out .15s;
     }
 
+        .az-form-group .az-input.xs
+        {
+            height: 25px;
+            padding: 0 6px 0 6px;
+        }
+
+        .az-form-group .az-input.sm
+        {
+            height: 35px;
+            padding: 0 8px 0 8px;
+        }
+
+        .az-form-group .az-input.md
+        {
+            height: 40px;
+            padding: 0 9px 0 9px;
+        }
+
     .az-form-group > .az-input ~ i
     {
         position: relative;
@@ -5186,24 +5204,6 @@ ul
         float: right;
         margin: -28px 9px 0 0;
         font-size: 17px;
-    }
-
-    .az-form-group .az-input.xs
-    {
-        height: 25px;
-        padding: 0 6px 0 6px;
-    }
-
-    .az-form-group .az-input.sm
-    {
-        height: 35px;
-        padding: 0 8px 0 8px;
-    }
-
-    .az-form-group .az-input.md
-    {
-        height: 40px;
-        padding: 0 9px 0 9px;
     }
 
     .az-form-group .az-input:focus
@@ -5331,6 +5331,157 @@ ul
             -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
             box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
         }
+
+
+    /* Range Slider */
+    .az-form-group .az-range
+    {
+        -webkit-appearance: none;
+        width: 100%;
+    }
+
+        .az-form-group .az-range:focus
+        {
+            outline: none;
+        }
+
+        .az-form-group .az-range::-webkit-slider-runnable-track
+        {
+            height: 20px;
+        }
+
+        .az-form-group .az-range.xs::-webkit-slider-runnable-track
+        {
+            height: 15px;
+        }
+
+        .az-form-group .az-range.sm::-webkit-slider-runnable-track
+        {
+            height: 25px;
+        }
+
+        .az-form-group .az-range.md::-webkit-slider-runnable-track
+        {
+            height: 30px;
+        }
+
+        .az-form-group .az-range::-moz-range-track
+        {
+            height: 20px;
+        }
+
+        .az-form-group .az-range.xs::-moz-range-track
+        {
+            height: 15px;
+        }
+
+        .az-form-group .az-range.sm::-moz-range-track
+        {
+            height: 25px;
+        }
+
+        .az-form-group .az-range.md::-moz-range-track
+        {
+            height: 30px;
+        }
+
+        .az-form-group .az-range::-ms-track
+        {
+            height: 10px;
+        }
+
+        .az-form-group .az-range.xs::-ms-track
+        {
+            height: 5px;
+        }
+
+        .az-form-group .az-range.sm::-ms-track
+        {
+            height: 15px;
+        }
+
+        .az-form-group .az-range.md::-ms-track
+        {
+            height: 20px;
+        }
+
+        .az-form-group .az-range::-webkit-slider-thumb
+        {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 30px;
+            margin-top: -5px;
+            cursor: pointer;
+        }
+
+        .az-form-group .az-range.xs::-webkit-slider-thumb
+        {
+            width: 15px;
+            height: 25px;
+        }
+
+        .az-form-group .az-range.sm::-webkit-slider-thumb
+        {
+            width: 25px;
+            height: 35px;
+        }
+
+        .az-form-group .az-range.md::-webkit-slider-thumb
+        {
+            width: 30px;
+            height: 40px;
+        }
+
+        .az-form-group .az-range::-moz-range-thumb
+        {
+            width: 20px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .az-form-group .az-range.xs::-moz-range-thumb
+        {
+            width: 15px;
+            height: 25px;
+        }
+
+        .az-form-group .az-range.sm::-moz-range-thumb
+        {
+            width: 25px;
+            height: 35px;
+        }
+
+        .az-form-group .az-range.md::-moz-range-thumb
+        {
+            width: 30px;
+            height: 40px;
+        }
+
+        .az-form-group .az-range::-ms-thumb
+        {
+            width: 20px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .az-form-group .az-range.xs::-ms-thumb
+        {
+            width: 15px;
+            height: 25px;
+        }
+
+        .az-form-group .az-range.sm::-ms-thumb
+        {
+            width: 25px;
+            height: 35px;
+        }
+
+        .az-form-group .az-range.md::-ms-thumb
+        {
+            width: 30px;
+            height: 40px;
+        }
+
 
     /* Buttons */
     .az-form-group .az-button
@@ -5829,6 +5980,7 @@ ul
         opacity: 1;
     }
 }
+
 /* xs - (0 - 576)*/
 /* sm - (577 - 767)*/
 /* md - (768 - 991)*/

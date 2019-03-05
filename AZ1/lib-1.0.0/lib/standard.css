@@ -274,6 +274,37 @@ form.css
         font-size: 1.2em;
     }
 
+.az-form-group .az-range::-webkit-slider-runnable-track
+{
+    background-color: #d3d3d3;
+}
+
+.az-form-group .az-range::-moz-range-track
+{
+    background-color: #d3d3d3;
+}
+
+.az-form-group .az-range::-ms-track
+{
+    background-color: #d3d3d3;
+}
+
+.az-form-group .az-range::-webkit-slider-thumb
+{
+    background-color: #4CAF50;
+}
+
+.az-form-group .az-range::-moz-range-thumb
+{
+    background-color: #4CAF50;
+}
+
+.az-form-group .az-range::-ms-thumb
+{
+    background-color: #4CAF50;
+}
+
+
 /* Buttons */
 .az-form-group .az-button.xs
 {

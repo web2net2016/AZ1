@@ -26,11 +26,24 @@
         $(document).ready(function ()
         {
             initializePage({}, function ()
-            {               
+            {
                 w3CodeColor();
                 hideCoverSpin();
             });
+
+            $("#ShowCoverSpin").off("click", ShowCoverSpin).on("click", ShowCoverSpin);
         });
+
+        function ShowCoverSpin()
+        {
+            showCoverSpin("Show Cover Spin");
+            $("#az-cover-spin").off("click", HideCoverSpin).on("click", HideCoverSpin);
+        }
+
+        function HideCoverSpin()
+        {
+            hideCoverSpin();
+        }
 
     </script>
 </head>
@@ -38,6 +51,14 @@
 
     <form id="frmReg">
         <div class="az-container">
+
+            <div class="az-row az-margin-t-56 az-code htmlHigh notranslate">
+                <div class="az-col xs-12">
+                    <div class="az-form-group">
+                        <button id="ShowCoverSpin" type="button" class="az-button az-button-block primary az-shadow-1 az-shadow-hover-2">Show Cover Spin</button>
+                    </div>
+                </div>
+            </div>
 
             <div class="az-row az-margin-t-56 az-code htmlHigh notranslate">
                 <div class="az-col xs-12"><h1>h1 font-size: 36px</h1></div>

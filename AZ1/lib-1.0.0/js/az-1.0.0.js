@@ -1526,7 +1526,7 @@ function initAZTabs(Options)
             execAZTabs(main.$Tabs.children("ul").children("li").eq(SelectedIndex));
         }
 
-        main.$Tabs.off().on(main.Options.azTabsOpenEvent, "ul > li", function (e)
+        main.$Tabs.off().on(main.Options.azTabsOpenEvent, " > ul > li", function (e)
         {
             var _Element = e.target || e.srcElement;
             $.publish("functionlib/azTabs",
@@ -2446,12 +2446,13 @@ function changeModalTitlebar(Options)
     }
 }
 
-function showCoverSpin()
+function showCoverSpin(CoverSpinText)
 {
+    var _CoverSpinText = CoverSpinText === undefined ? "" : CoverSpinText;
     var _$CoverSpin = $("#az-cover-spin");
     if (_$CoverSpin.length == 0)
     {
-        $("body").append('<div id="az-cover-spin"></div>');
+        $("body").append('<div id="az-cover-spin"><div>' + _CoverSpinText + '</div></div>');
     }
 }
 

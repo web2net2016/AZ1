@@ -19,6 +19,13 @@ h6
     font-weight: 400;
 }
 
+/* Cover Spin Text */
+#az-cover-spin > div
+{
+    margin-top: 60px;
+    font-size: 16px;
+}
+
 
 /*--------------------------------------------------------
 Accordion 

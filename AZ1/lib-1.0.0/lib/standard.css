@@ -168,39 +168,30 @@ display.css
 /*--------------------------------------------------------
 Form 
 form.css
-- Form Group - Input Group Addon
+- Form Group
+- Input Group Addon
 - Input Standard
+- Toggle Switch
+- Range (Slider)
 - Buttons
 - Input Animated
 - Alert
 - Modal
 - Dropdown
 - Badge
-- Snackbar
+- Cover Spin
+- Fieldset
+- Lable Asterisk
 - Animations Keyframes
 -----------------------------------------------------------*/
-/* Form Group - Input Group Addon */
+/* Form Group */
+
+/* Input Group Addon */
 .az-form-group .az-input-group-addon
 {
     border: 1px solid #BBBBBB;
     background-color: #DDDDDD;
 }
-
-    .az-form-group .az-input-group-addon.xs
-    {
-        font-size: 0.85em;
-    }
-
-    .az-form-group .az-input-group-addon.sm
-    {
-        font-size: 1.4em;
-    }
-
-    .az-form-group .az-input-group-addon.md
-    {
-        font-size: 1.7em;
-    }
-
 
 /* Input Standard */
 .az-form-group .az-input
@@ -209,56 +200,11 @@ form.css
     background-color: #FFFFFF;
 }
 
-    .az-form-group .az-input.xs
-    {
-        font-size: 0.85em;
-    }
-
-    .az-form-group .az-input.sm
-    {
-        font-size: 1.1em;
-    }
-
-    .az-form-group .az-input.md
-    {
-        font-size: 1.2em;
-    }
-
-.az-form-group .az-label.xs
-{
-    font-size: 0.85em;
-}
-
-.az-form-group .az-label.sm
-{
-    font-size: 1.1em;
-}
-
-.az-form-group .az-label.md
-{
-    font-size: 1.2em;
-}
-
 .az-form-group .az-textarea
 {
     border: 1px solid #BBBBBB;
     background-color: #FFFFFF;
 }
-
-    .az-form-group .az-textarea.xs
-    {
-        font-size: 0.85em;
-    }
-
-    .az-form-group .az-textarea.sm
-    {
-        font-size: 1.1em;
-    }
-
-    .az-form-group .az-textarea.md
-    {
-        font-size: 1.2em;
-    }
 
 .az-form-group .az-select
 {
@@ -266,74 +212,59 @@ form.css
     background-color: #FFFFFF;
 }
 
-    .az-form-group .az-select.xs
+/* Toggle Switch */
+.az-form-group .az-switch .az-slider
+{
+    background-color: #CCCCCC;
+}
+
+    .az-form-group .az-switch .az-slider:before
     {
-        font-size: 0.85em;
+        background-color: #FFFFFF;
     }
 
-    .az-form-group .az-select.sm
+.az-form-group .az-switch input:checked + .az-slider
+{
+    background-color: #0078D7;
+}
+
+/* Range (Slider) */
+.az-form-group .az-range
+{
+    background-color: #DEDEDE;
+}
+
+    .az-form-group .az-range::-webkit-slider-runnable-track
     {
-        font-size: 1.1em;
+        background-color: #CCCCCC;
     }
 
-    .az-form-group .az-select.md
+    .az-form-group .az-range::-moz-range-track
     {
-        font-size: 1.2em;
+        background-color: #CCCCCC;
     }
 
-.az-form-group .az-range::-webkit-slider-runnable-track
-{
-    background-color: #d3d3d3;
-}
+    .az-form-group .az-range::-ms-track
+    {
+        background-color: #CCCCCC;
+    }
 
-.az-form-group .az-range::-moz-range-track
-{
-    background-color: #d3d3d3;
-}
+    .az-form-group .az-range::-webkit-slider-thumb
+    {
+        background-color: #0078D7;
+    }
 
-.az-form-group .az-range::-ms-track
-{
-    background-color: #d3d3d3;
-}
+    .az-form-group .az-range::-moz-range-thumb
+    {
+        background-color: #0078D7;
+    }
 
-.az-form-group .az-range::-webkit-slider-thumb
-{
-    background-color: #4CAF50;
-}
-
-.az-form-group .az-range::-moz-range-thumb
-{
-    background-color: #4CAF50;
-}
-
-.az-form-group .az-range::-ms-thumb
-{
-    background-color: #4CAF50;
-}
-
+    .az-form-group .az-range::-ms-thumb
+    {
+        background-color: #0078D7;
+    }
 
 /* Buttons */
-.az-form-group .az-button.xs
-{
-    font-size: 0.85em;
-}
-
-.az-form-group .az-button.sm
-{
-    font-size: 1.1em;
-}
-
-.az-form-group .az-button.md
-{
-    font-size: 1.2em;
-}
-
-.az-form-group .az-button-outline
-{
-    outline: 1px solid red;
-    outline-offset: 4px;
-}
-
 .az-form-group .az-button.default
 {
     background-color: #FFFFFF;
@@ -387,78 +318,18 @@ form.css
     background-color: transparent;
 }
 
-    .az-form-group .az-input-group-addon-animated.xs
-    {
-        font-size: 0.85em;
-    }
-
-    .az-form-group .az-input-group-addon-animated.sm
-    {
-        font-size: 1.4em;
-    }
-
-    .az-form-group .az-input-group-addon-animated.md
-    {
-        font-size: 1.7em;
-    }
-
 .az-form-group .az-input-animated
 {
     border-bottom: 1px solid #CCCCCC !important;
     background-color: transparent;
 }
 
-    .az-form-group .az-input-animated.xs
-    {
-        font-size: 0.85em;
-    }
-
-    .az-form-group .az-input-animated.sm
-    {
-        font-size: 1.1em;
-    }
-
-    .az-form-group .az-input-animated.md
-    {
-        font-size: 1.2em;
-    }
-
     .az-form-group .az-input-animated:focus
     {
         border-bottom: 1px solid #666666 !important;
     }
 
-.az-form-group .az-label-animated.xs
-{
-    font-size: 0.85em;
-}
-
-.az-form-group .az-label-animated.sm
-{
-    font-size: 1.1em;
-}
-
-.az-form-group .az-label-animated.md
-{
-    font-size: 1.2em;
-}
-
 /* Alert */
-.az-form-group .az-alert.xs
-{
-    font-size: 0.85em;
-}
-
-.az-form-group .az-alert.sm
-{
-    font-size: 1.1em;
-}
-
-.az-form-group .az-alert.md
-{
-    font-size: 1.2em;
-}
-
 .az-form-group .az-alert-default
 {
     background-color: #FFFFFF;
@@ -516,32 +387,19 @@ form.css
         #az-modal > .az-modal-card > header > h1
         {
             display: inline-block;
-            font-size: 13px;
+            font-size: 18px;
         }
 
         #az-modal > .az-modal-card > header > span
         {
             margin-right: 4px;
-            font-size: 13px;
+            font-size: 17px;
         }
 
             #az-modal > .az-modal-card > header > span:hover
             {
                 color: #FFFFFF;
             }
-
-
-    #az-modal > .az-modal-card > article .az-form-group
-    {
-        margin: 3px;
-    }
-
-        #az-modal > .az-modal-card > article .az-form-group .az-button
-        {
-            padding: 5.5px;
-            font-size: 0.85em;
-        }
-
 
 /* Dropdown */
 .az-dropdown-default-layout
@@ -569,6 +427,17 @@ form.css
                 border-bottom: 1px solid #009688;
             }
 
+/* Badge */
+
+
+
+/* Cover Spin Text */
+#az-cover-spin > div
+{
+    margin-top: 60px;
+    font-size: 16px;
+}
+
 /* Fieldset */
 .az-fieldset
 {
@@ -583,16 +452,6 @@ form.css
 .az-mandatory-asterisk
 {
     color: #FF0000;
-}
-
-/* Snackbar */
-#az-snackbar
-{
-    background-color: #333333;
-    color: #FFFFFF;
-    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    -moz-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 
@@ -972,6 +831,20 @@ sidebar.css
 Slideshow 
 slideshow.css    
 -----------------------------------------------------------*/
+
+
+/*--------------------------------------------------------
+Snackbar 
+snackbar.css    
+-----------------------------------------------------------*/
+#az-snackbar
+{
+    background-color: #333333;
+    color: #FFFFFF;
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    -moz-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
 
 
 /*--------------------------------------------------------

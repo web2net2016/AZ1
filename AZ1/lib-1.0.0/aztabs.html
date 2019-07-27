@@ -33,12 +33,12 @@
 
             $.subscribe("functionlib/azTabsActivate", function (e, data)
             {
-                console.log(data.azTabsId + " - Activated: " + data.azTabsActivated + " - Deactivated: " + data.azTabsDeactivated)
+                console.log("azTabsId: " + data.azTabsId + "\nazTabsActivated: " + data.azTabsActivated + "\nazTabsDeactivated: " + data.azTabsDeactivated)
             });
 
             $.subscribe("functionlib/azTabs", function (e, data)
             {
-                console.log(data.azTabsId, data.azTabsJQElement)
+                console.log("azTabsId: " + data.azTabsId + "\nazTabsJQElement: ", data.azTabsJQElement)
             });
 
             var azTabsFunction1 = new initAZTabs(

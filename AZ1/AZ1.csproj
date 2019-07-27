@@ -83,6 +83,7 @@
     <Content Include="lib-1.0.0\css\tabs.css" />
     <Content Include="lib-1.0.0\default.html" />
     <Content Include="favicon.ico" />
+    <Content Include="lib-1.0.0\form2.html" />
     <Content Include="lib-1.0.0\form.html" />
     <Content Include="lib-1.0.0\grid.html" />
     <Content Include="lib-1.0.0\azcdn100.html" />

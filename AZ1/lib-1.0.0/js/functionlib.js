@@ -93,7 +93,7 @@ function initializePage(Options, Callback)
     });
     ThisLocation = window.document.location.hostname;
     ThisPage = window.document.location.pathname;
-    ThisFormId = window.document.forms[0].id;
+    ThisFormId = $("form").attr("id");
 
     if (_Options.setWindowScrollTop)
     {
@@ -1446,6 +1446,58 @@ function hideShowPassword(e)
     }
 }
 
+function azCheckbox(e)
+{
+    var _Element = e.target || e.srcElement;
+    var _$SelectedCheckbox = $(this);
+    $.publish("functionlib/azCheckbox",
+        {
+            azCheckboxId: _$SelectedCheckbox.attr("id") === undefined ? "" : _$SelectedCheckbox.attr("id"),
+            azCheckboxValue: _$SelectedCheckbox.attr("value") === undefined ? "" : _$SelectedCheckbox.attr("value"),
+            azCheckboxChecked: _$SelectedCheckbox.is(":checked"),
+            azCheckboxJQElement: $(_Element)
+        });
+}
+
+function azRadio(e)
+{
+    var _Element = e.target || e.srcElement;
+    var _$SelectedRadio = $(this);
+    $.publish("functionlib/azRadio",
+        {
+            azRadioId: _$SelectedRadio.attr("id") === undefined ? "" : _$SelectedRadio.attr("id"),
+            azRadioName: _$SelectedRadio.attr("name") === undefined ? "" : _$SelectedRadio.attr("name"),
+            azRadioValue: _$SelectedRadio.attr("value") === undefined ? "" : _$SelectedRadio.attr("value"),
+            azRadioChecked: _$SelectedRadio.is(":checked"),
+            azRadioJQElement: $(_Element)
+        });
+}
+
+function azSwitch(e)
+{
+    var _Element = e.target || e.srcElement;
+    var _$SelectedSwitch = $(this);
+    $.publish("functionlib/azSwitch",
+        {
+            azSwitchId: _$SelectedSwitch.attr("id") === undefined ? "" : _$SelectedSwitch.attr("id"),
+            azSwitchValue: _$SelectedSwitch.attr("value") === undefined ? "" : _$SelectedSwitch.attr("value"),
+            azSwitchChecked: _$SelectedSwitch.is(":checked"),
+            azSwitchJQElement: $(_Element)
+        });
+}
+
+function azRange(e)
+{
+    var _Element = e.target || e.srcElement;
+    var _$SelectedRange = $(this);
+    $.publish("functionlib/azRange",
+        {
+            azRangeId: _$SelectedRange.attr("id") === undefined ? "" : _$SelectedRange.attr("id"),
+            azRangeValue: _$SelectedRange.val(),
+            azRangeJQElement: $(_Element)
+        });
+}
+
 function setGridView(SelectedArea)
 {
     if (isEmpty(ObjJsonValidation) == false)
@@ -2446,6 +2498,13 @@ function formStyle(SelectedArea)
                 $.datepicker.setDefaults($.datepicker.regional[ThisLanguage]);
             }
         }
+        if ($(this).is("[type='range']"))
+        {
+            if ($(this).hasClass("az-range"))
+            {
+                $(this).off("change", azRange).on("change", azRange);
+            }
+        }   
         if ($(this).is("textarea"))
         {
             $(this).attr("autocomplete", "false");
@@ -2502,6 +2561,14 @@ function formStyle(SelectedArea)
             {
                 $(this).prop("disabled", true);
             }
+            if ($(this).hasClass("az-checkbox"))
+            {
+                $(this).off("click", azCheckbox).on("click", azCheckbox);
+            }
+            if ($(this).parent("label").hasClass("az-switch"))
+            {
+                $(this).off("click", azSwitch).on("click", azSwitch);
+            }
         }
         if ($(this).is("[type='radio']"))
         {
@@ -2512,6 +2579,10 @@ function formStyle(SelectedArea)
             if ($(this).hasClass("disabled"))
             {
                 $(this).prop("disabled", true);
+            }
+            if ($(this).hasClass("az-radio"))
+            {
+                $(this).off("click", azRadio).on("click", azRadio);
             }
         }
         if ($(this).is("select"))
